@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+#spider {
+    background-image: url(https://i.pinimg.com/originals/4f/f0/22/4ff022616d5d3bf77e22ff091e99e176.jpg);
+    background-position: top center;
+}
+
+#naruto {
+    background-image: url(https://i.pinimg.com/originals/42/cf/6e/42cf6ea7dae7548244a7d5a546bf37aa.jpg);
+    background-color: #8f4a3b;
+}
+
+#venom {
+    background-image: url(https://i.pinimg.com/originals/41/ca/f3/41caf3be8593cea274bee55cdca23ed2.jpg);
+}
+
+#deadpool {
+    background-image: url(https://i.pinimg.com/originals/1c/0a/e8/1c0ae8490deff4d5ff9453effc80d8f5.jpg);
+}
+
+#miles {
+    background-image: url(https://i.pinimg.com/originals/18/a9/d9/18a9d99b58c0ee343fce7a0590c5d129.jpg);
+}
+
+.panels {
+    padding: 300px 30px;
+    border-radius: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: black;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 1s ease-in;
+    position: relative;
+}
+.panels h2 {
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    opacity: 0;
+}
+.panels.active {
+    padding: 300px 150px;
+    background-position: center center;
+
+}
+
+.panels.active h2 {
+opacity: 1;
+transition: opacity 0.4s ease-in 0.5s;
+}
+
+main {
+    display: flex;
+}
+
+@media (max-width: 480px) {
+    .panels {
+        padding: 200px 10px;
+        margin: 0 5px;
+    }
+    .panels.active {
+        padding: 200px 75px;
+    }
+    .panels.active {
+        background-size: contain;
+    
+    }
+    /*#naruto, #venom {
+        display: none;
+    }*/
+}
